@@ -27,6 +27,11 @@ public class AllureStorage {
         public LinkedList<String> initialValue() {
             return new LinkedList<>();
         }
+
+        @Override
+        protected LinkedList<String> childValue(final LinkedList<String> parentValue) {
+            return new LinkedList<>(parentValue);
+        }
     };
 
     @SuppressWarnings("PMD.NullAssignment")
